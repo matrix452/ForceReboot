@@ -6,8 +6,8 @@ $totalseconds = 0
 $SecondsLeft = 0
 #Get current time
 $Hour1 = (get-Date).Hour;
-$Min1 = (get-date).Minute;
-$second1 = (get-date).Second;
+$Min1 = (Get-Date).Minute;
+$second1 = (Get-Date).Second;
 #Convert Current time to Seconds
 $totalseconds = $second1 + ($Min1 * 60) + ($Hour1 * 3600);
 #Set Reboot time, hour in 24 time * 3600, to add something other than on the hour, add (MM * 60) 
@@ -18,8 +18,8 @@ $SecondsLeft = $RebootTime - $totalseconds
 while ($SecondsLeft -gt 0 )
 {
     $Hour1 = (get-Date).Hour;
-    $Min1 = (get-date).Minute;
-    $second1 = (get-date).Second;
+    $Min1 = (Get-Date).Minute;
+    $second1 = (Get-Date).Second;
     $totalseconds = $second1 + ($Min1 * 60) + ($Hour1 * 3600);
     $SecondsLeft = $RebootTime - $totalseconds
 }
